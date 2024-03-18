@@ -1,0 +1,13 @@
+python==3.8.10
+pytorch==1.11
+pytorch-lightning==1.5.5
+cuda==11.7
+pillow
+scikit-image==0.15
+sewar
+mpmath
+easydict
+opencv-python
+protobuf==4.25.1
+tqdm
+thop
