@@ -136,19 +136,19 @@ python mfe_BuildFormer/building_seg_test.py -c mfe_BuildFormer/config/whubuildin
 
 
 
-![](D:\桌面\img\srcdm_blind\AIRS_fig_clip.pn)
+![](results_img/AIRS_fig_clip.png)
 
 **Fig. 5.** Visual comparisons of experiments on AIRS dataset.
 
 
 
-![](D:\桌面\img\srcdm_blind\WHU_fig_clip.png)
+![](results_img/WHU_fig_clip.png)
 
 **Fig. 6.** Visual comparisons of experiments on WHU Building dataset.
 
 
 
-![](D:\桌面\img\srcdm_blind\UCM_fig_clip.png)
+![](results_img/UCM_fig_clip.png)
 
 **Fig. 7.** Visual comparisons of experiments on UC Merced dataset. Here we show four typical scenes.
 
@@ -156,7 +156,7 @@ python mfe_BuildFormer/building_seg_test.py -c mfe_BuildFormer/config/whubuildin
 
 ### 2.  Building Extraction Evaluation of SR Results
 
-![](D:\桌面\img\srcdm_blind\Building_clip.png)
+![](results_img/Building_clip.png)
 
 **Fig. 8.** Visualization comparison of buildings extracted from SR results of different methods. (a) and (b) are from the AIRS dataset. (c) and (d) are from the WHU Building dataset.
 
@@ -164,6 +164,6 @@ python mfe_BuildFormer/building_seg_test.py -c mfe_BuildFormer/config/whubuildin
 
 ### 3. Evaluation on Real-world Chinese Gaofen Multispectral Data
 
-![](D:\桌面\img\srcdm_blind\GF-1-2_clip.png)
+![](results_img/GF-1-2_clip.png)
 
 **Fig. 9.** Comparison of six methods for 4x super-resolution on real-world RS images. (a) GF-1 satellite image. (b) GF-2 satellite image. Smaller NIQE and higher AG imply better super-resolution results.
