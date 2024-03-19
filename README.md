@@ -135,10 +135,10 @@ python mfe_BuildFormer/building_seg_test.py -c mfe_BuildFormer/config/whubuildin
 ### 1. Comparisons With The State-of-the-Art Methods
 
 
-
 ![](results_img/AIRS_fig_clip.png)
 
 **Fig. 5.** Visual comparisons of experiments on AIRS dataset.
+
 
 
 
@@ -148,9 +148,11 @@ python mfe_BuildFormer/building_seg_test.py -c mfe_BuildFormer/config/whubuildin
 
 
 
+
 ![](results_img/UCM_fig_clip.png)
 
 **Fig. 7.** Visual comparisons of experiments on UC Merced dataset. Here we show four typical scenes.
+
 
 
 
@@ -159,6 +161,7 @@ python mfe_BuildFormer/building_seg_test.py -c mfe_BuildFormer/config/whubuildin
 ![](results_img/Building_clip.png)
 
 **Fig. 8.** Visualization comparison of buildings extracted from SR results of different methods. (a) and (b) are from the AIRS dataset. (c) and (d) are from the WHU Building dataset.
+
 
 
 
