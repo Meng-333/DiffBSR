@@ -1,0 +1,101 @@
+#################################
+##  Configs for the Trainer    ##
+#################################
+trainer:
+  pretrain_epochs: 0
+  max_epochs: 400
+  save_top_k: 10
+  save_period: 5
+  check_val_every_n_epoch: 1
+
+#################################
+##  Configs for the DataModule ##
+#################################
+data_module:
+  name: BlindSRDataModule
+  args:
+    num_workers: 8
+    rgb_range: 1
+    scale: 4
+    train:
+      data_path: load/train
+      data_length: 16000
+      data_cache: memory
+      hr_img_sz: 256
+      batch_size: 8
+    valid:
+      data_path: load/val
+      data_first_k: 1
+      
+#######################################
+##  Configs for the LightningModule  ##
+#######################################
+lit_model:
+  name: FastDiffBlindSRModel
+  args:
+    scale: 4
+    mean: [0.5, 0.5, 0.5]
+    std: [0.5, 0.5, 0.5]
+    # degradation settings
+    blur_kernel: 21
+    blur_type: 'iso_gaussian' # iso_gaussian
+    sig_min: 0.2
+    sig_max: 4.0
+    lambda_min: 0.2
+    lambda_max: 4.0
+    theta: 0.0
+    noise: 5.0
+    ###
+    dg_encoder: DegradationEncoder
+    contrast_loss_weight: 0.05
+    ema: true
+    ema_rate: 0.999
+    encoder:
+      name: SRDSRAN_Net
+      args:
+        in_channels: 3
+        out_channels: 3
+        n_residual_blocks: 12
+        n_basic_blocks: 3
+        rla_mode: 'CA-SA'
+        bla_mode: 'CA-SA'
+        ga_mode: 'CA-SA'
+        pool_mode: 'Avg|Max'
+        addconv: True
+        upscale_factor: 4
+      is_train: true
+    diffusion_model:
+      name: FastDiffSR_UNet
+      args:
+        in_channel: 6
+        out_channel: 3
+        norm_groups: 32
+        inner_channel: 64
+        channel_mults: [1, 2, 4, 4]
+        attn_res: [16]
+        res_blocks: 2
+        dropout: 0
+        image_size: 256
+    beta_schedule:
+      schedule: linear_cosine
+      linear_start: 0.000001
+      linear_end: 0.01
+      n_timestep: 20
+    diffusion:
+      image_size: 256
+      channels: 3
+      conditional: True
+      loss_type: 'l1'
+    valid:
+      eta: 0
+      scale: 4
+      no_crop_border: false
+      test_Y: false
+      blur_type: 'iso_gaussian' 
+      blur_kernel: 21
+      sig: 2.0
+      noise: 0.0
+    optimizer:
+      lr: 0.0002
+      lr_scheduler_milestones: [400]
+      lr_scheduler_gamma: 0.5
