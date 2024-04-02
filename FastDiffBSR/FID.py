@@ -4,11 +4,11 @@ from litsr.metrics import *
 
 #scene = 'tenniscourt'
 
-rslt_path = "/root/autodl-tmp/FastDiffBSR/FID/SR"
-#hr_path =  "/root/autodl-tmp/FastDiffBSR/load/AIRS_test"
-hr_path = "/root/autodl-tmp/FastDiffBSR/load/WHU_test"
+rslt_path = "/root/autodl-tmp/DiffBSR/FID/SR"
+#hr_path =  "/root/autodl-tmp/DiffBSR/load/AIRS_test"
+hr_path = "/root/autodl-tmp/DiffBSR/load/WHU_test"
 
-#hr_path =  "/root/autodl-tmp/FastDiffBSR/load/UCM_test/{}".format(scene)
+#hr_path =  "/root/autodl-tmp/DiffBSR/load/UCM_test/{}".format(scene)
 
 paths = [rslt_path, hr_path]
 fid_score = calc_fid(paths)
