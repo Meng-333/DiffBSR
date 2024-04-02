@@ -158,7 +158,7 @@ python mfe_BuildFormer/building_seg_test.py -c mfe_BuildFormer/config/whubuildin
 
 ### 2.  Building Extraction Evaluation of SR Results
 
-![](results_img/Building_0_clip.png)
+![](results_img/Building_0402_clip.png)
 
 **Fig. 8.** Visualization comparison of buildings extracted from SR results of different methods. (a) and (b) are from the AIRS dataset. (c) and (d) are from the WHU Building dataset.
 
