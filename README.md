@@ -1,21 +1,21 @@
-# FastDiffBSR
-A method framework with degradation representation network and denoising conditional Diffusion model for blind super-resolution of remote sensing image
+# DiffBSR
+A method framework with degradation representation network and conditional Diffusion model for blind super-resolution of remote sensing image
 
 ## Folder Structure
 
 Our folder structure is as follows:
 
 ```
-├── FastDiffBSR (code)
+├── DiffBSR (code)
 │   ├── archs
 │   │   ├── __init__.py
 │   │   ├── common.py
-│   │   ├── FastDiffSR_unet_arch.py
+│   │   ├── DiffSR_unet_arch.py
 │   │   ├── degradation_encoder_arch.py
 │   ├── configs
-│   │   ├── fastdiffbsr_iso.yaml
-│   │   ├── fastdiffbsr_aniso.yaml
-│   │   ├── fastdiffbsr_aniso_UCM.yaml
+│   │   ├── DiffBSR_iso.yaml
+│   │   ├── diffbsr_aniso.yaml
+│   │   ├── diffbsr_aniso_UCM.yaml
 │   ├── data
 │   │   ├── __init__.py
 │   │   ├── blindsr_JIF_datamodule.py
@@ -36,7 +36,7 @@ Our folder structure is as follows:
 │   ├── models
 │   │   ├── __init__.py
 │   │   ├── blindSRSNF_model.py
-│   │   ├── FastDiffBSR_model.py
+│   │   ├── DiffBSR_model.py
 │   ├── utils
 │   │   ├── __init__.py
 │   │   ├── srmd_degrade.py
@@ -52,9 +52,9 @@ Our folder structure is as follows:
 
 ## Introduction
 
-- FastDiffBSR (Diffusion model architecture): This project is based on [[BlindSRSNF]](https://github.com/hanlinwu/BlindSRSNF)
+- DiffBSR (Diffusion model architecture): This project is based on [[BlindSRSNF]](https://github.com/hanlinwu/BlindSRSNF)
 
-  - Contains six blind super-resolution models: ['DANv1', 'DANv2', 'DCLS', 'DRSR', 'BlindSRSNF', '**FastDiffBSR**']
+  - Contains six blind super-resolution models: ['DANv1', 'DANv2', 'DCLS', 'DRSR', 'BlindSRSNF', '**DiffBSR**']
   - BuildFormer: building extraction experiments for super-resolution results, this project is based on [[BuildFormer]](https://github.com/WangLibo1995/BuildFormer)
 
 
@@ -84,16 +84,16 @@ We used three datasets to train our model. After secondary processing, we obtain
 2. Run training / evaluation code. The code is for training on 1 GPU.
 
 ```bash
-# FastDiffBSR
-cd FastDiffBSR 
+# DiffBSR
+cd DiffBSR 
 # train
-python train.py --config configs/fastdiffbsr_iso.yaml
-python train.py --config configs/fastdiffbsr_aniso.yaml
-python train.py --config configs/fastdiffbsr_aniso_UCM.yaml
+python train.py --config configs/diffbsr_iso.yaml
+python train.py --config configs/diffbsr_aniso.yaml
+python train.py --config configs/diffbsr_aniso_UCM.yaml
 # test
-python test.py --checkpoint logs/fastdiffbsr_iso/version_0/checkpoints/epoch=399-step=799999.ckpt
-python test.py --checkpoint logs/fastdiffbsr_aniso/version_0/checkpoints/epoch=399-step=799999.ckpt
-python test.py --checkpoint logs/fastdiffbsr_aniso_UCM/version_0/checkpoints/epoch=399-step=799999.ckpt
+python test.py --checkpoint logs/diffbsr_iso/version_0/checkpoints/epoch=399-step=799999.ckpt
+python test.py --checkpoint logs/diffbsr_aniso/version_0/checkpoints/epoch=399-step=799999.ckpt
+python test.py --checkpoint logs/diffbsr_aniso_UCM/version_0/checkpoints/epoch=399-step=799999.ckpt
 # infer
 python infer.py --checkpoint logs/your_checkpoint_path
 
@@ -101,7 +101,7 @@ python infer.py --checkpoint logs/your_checkpoint_path
 ---------------------------------------------------------------
 # DANv1,DANv2,DCLS:
 # DANv1
-cd FastDiffBSR/DCLS/codes/config/DANv1
+cd DiffBSR/DCLS/codes/config/DANv1
 # train
 python3 train.py -opt=options/setting1/train_setting1_x4.yml  # iso
 python3 train.py -opt=options/setting2/train_setting2_x4.yml  # aniso
@@ -114,7 +114,7 @@ python inference.py -opt=options/setting1/test_setting1_x4.yml/-opt=options/sett
 # DANv2,DCLS (the same as above)
 ---------------------------------------------------------------
 # DRSR:
-cd FastDiffBSR/DRSR
+cd DiffBSR/DRSR
 # train
 python main.py
 # test
@@ -123,7 +123,7 @@ python eval.py
 python infer.py
 ---------------------------------------------------------------
 # BuildFormer 
-cd FastDiffBSR/BuildFormer
+cd DiffBSR/BuildFormer
 # train
 python mfe_BuildFormer/train_supervision.py -c mfe_BuildFormer/config/whubuilding/buildformer.py
 # test
