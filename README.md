@@ -1,5 +1,5 @@
 # DiffBSR
-A method framework with degradation representation network and conditional Diffusion model for blind super-resolution of remote sensing image
+Remote sensing image blind super-resolution via a convolutional neural network-guided condition Diffusion model
 
 ## Folder Structure
 
@@ -12,6 +12,7 @@ Our folder structure is as follows:
 │   │   ├── common.py
 │   │   ├── DiffSR_unet_arch.py
 │   │   ├── degradation_encoder_arch.py
+│   │   ├── sr3_vanilla_unet_arch.py
 │   ├── configs
 │   │   ├── DiffBSR_iso.yaml
 │   │   ├── diffbsr_aniso.yaml
@@ -33,10 +34,11 @@ Our folder structure is as follows:
 │   │   ├── UCM_train
 │   │   ├── UCM_val
 │   │   ├── UCM_test
-│   ├── models
+│   ├── models (BlindSRSNF, SR3, DiffBSR model)
 │   │   ├── __init__.py
 │   │   ├── blindSRSNF_model.py
 │   │   ├── DiffBSR_model.py
+│   │   ├── sr3_vanilla_model.py
 │   ├── utils
 │   │   ├── __init__.py
 │   │   ├── srmd_degrade.py
@@ -45,7 +47,7 @@ Our folder structure is as follows:
 │   ├── test.py
 │   ├── infer.py   (type == "LR_only")
 
-│   ├── DCLS (DANv1,DANv2,DCLS model)
+│   ├── DCLS (DANv2, DCLS model)
 │   ├── DRSR (DRSR model)
 │   ├── mfe_BuildFormer (building extraction BuildFormer model)
 ```
@@ -54,7 +56,7 @@ Our folder structure is as follows:
 
 - DiffBSR (Diffusion model architecture): This project is based on [[BlindSRSNF]](https://github.com/hanlinwu/BlindSRSNF)
 
-  - Contains six blind super-resolution models: ['DANv1', 'DANv2', 'DCLS', 'DRSR', 'BlindSRSNF', '**DiffBSR**']
+  - Contains six blind super-resolution models: ['DANv2', 'DCLS', 'DRSR', 'BlindSRSNF', 'SR3', '**DiffBSR**']
   - BuildFormer: building extraction experiments for super-resolution results, this project is based on [[BuildFormer]](https://github.com/WangLibo1995/BuildFormer)
 
 
@@ -97,11 +99,11 @@ python test.py --checkpoint logs/diffbsr_aniso_UCM/version_0/checkpoints/epoch=3
 # infer
 python infer.py --checkpoint logs/your_checkpoint_path
 
-# BlindSRSNF (the same as above)
+# BlindSRSNF, SR3 (the same as above)
 ---------------------------------------------------------------
-# DANv1,DANv2,DCLS:
-# DANv1
-cd DiffBSR/DCLS/codes/config/DANv1
+# DANv2, DCLS:
+# DANv2
+cd DiffBSR/DCLS/codes/config/DANv2
 # train
 python3 train.py -opt=options/setting1/train_setting1_x4.yml  # iso
 python3 train.py -opt=options/setting2/train_setting2_x4.yml  # aniso
@@ -111,7 +113,7 @@ python3 test.py -opt=options/setting2/test_setting2_x4.yml    # aniso
 # infer
 python inference.py -opt=options/setting1/test_setting1_x4.yml/-opt=options/setting2/test_setting2_x4.yml
 
-# DANv2,DCLS (the same as above)
+# DCLS (the same as above)
 ---------------------------------------------------------------
 # DRSR:
 cd DiffBSR/DRSR
@@ -135,14 +137,14 @@ python mfe_BuildFormer/building_seg_test.py -c mfe_BuildFormer/config/whubuildin
 ### 1. Comparisons With The State-of-the-Art Methods
 
 
-![](results_img/AIRS_fig_clip.png)
+![](results_img/AIRS.png)
 
 **Fig. 5.** Visual comparisons of experiments on AIRS dataset.
 
 
 
 
-![](results_img/WHU_fig_clip.png)
+![](results_img/WHU.png)
 
 **Fig. 6.** Visual comparisons of experiments on WHU Building dataset.
 
@@ -158,7 +160,7 @@ python mfe_BuildFormer/building_seg_test.py -c mfe_BuildFormer/config/whubuildin
 
 ### 2.  Building Extraction Evaluation of SR Results
 
-![](results_img/Building_0402_clip.png)
+![](results_img/Building.png)
 
 **Fig. 8.** Visualization comparison of buildings extracted from SR results of different methods. (a) and (b) are from the AIRS dataset. (c) and (d) are from the WHU Building dataset.
 
@@ -167,6 +169,6 @@ python mfe_BuildFormer/building_seg_test.py -c mfe_BuildFormer/config/whubuildin
 
 ### 3. Evaluation on Real-world Chinese Gaofen Multispectral Data
 
-![](results_img/GF-1-2_clip.png)
+![](results_img/GF-1-2.png)
 
 **Fig. 9.** Comparison of six methods for 4x super-resolution on real-world RS images. (a) GF-1 satellite image. (b) GF-2 satellite image. Smaller NIQE and higher AG imply better super-resolution results.
