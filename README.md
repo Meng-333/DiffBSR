@@ -46,7 +46,6 @@ Our folder structure is as follows:
 │   ├── train.py
 │   ├── test.py
 │   ├── infer.py   (type == "LR_only")
-
 │   ├── DCLS (DANv2, DCLS model)
 │   ├── DRSR (DRSR model)
 ```
@@ -121,6 +120,8 @@ python main.py
 python eval.py
 # infer
 python infer.py
+
+
 
 ## Results
 
