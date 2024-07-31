@@ -49,7 +49,6 @@ Our folder structure is as follows:
 
 │   ├── DCLS (DANv2, DCLS model)
 │   ├── DRSR (DRSR model)
-│   ├── mfe_BuildFormer (building extraction BuildFormer model)
 ```
 
 ## Introduction
@@ -57,7 +56,6 @@ Our folder structure is as follows:
 - DiffBSR (Diffusion model architecture): This project is based on [[BlindSRSNF]](https://github.com/hanlinwu/BlindSRSNF)
 
   - Contains six blind super-resolution models: ['DANv2', 'DCLS', 'DRSR', 'BlindSRSNF', 'SR3', '**DiffBSR**']
-  - BuildFormer: building extraction experiments for super-resolution results, this project is based on [[BuildFormer]](https://github.com/WangLibo1995/BuildFormer)
 
 
 ## Environment Installation
@@ -123,14 +121,6 @@ python main.py
 python eval.py
 # infer
 python infer.py
----------------------------------------------------------------
-# BuildFormer 
-cd DiffBSR/BuildFormer
-# train
-python mfe_BuildFormer/train_supervision.py -c mfe_BuildFormer/config/whubuilding/buildformer.py
-# test
-python mfe_BuildFormer/building_seg_test.py -c mfe_BuildFormer/config/whubuilding/buildformer.py -o fig_results/whubuilding/buildformer --rgb -t 'lr'
-```
 
 ## Results
 
@@ -139,36 +129,27 @@ python mfe_BuildFormer/building_seg_test.py -c mfe_BuildFormer/config/whubuildin
 
 ![](results_img/AIRS.png)
 
-**Fig. 7.** Visual comparisons of experiments on AIRS dataset.
+**Fig. 6.** Visual comparisons of experiments on AIRS dataset.
 
 
 
 
 ![](results_img/WHU.png)
 
-**Fig. 8.** Visual comparisons of experiments on WHU Building dataset.
+**Fig. 7.** Visual comparisons of experiments on WHU Building dataset.
 
 
 
 
 ![](results_img/UCM.png)
 
-**Fig. 9.** Visual comparisons of experiments on UC Merced dataset. Here we show four typical scenes.
+**Fig. 8.** Visual comparisons of experiments on UC Merced dataset. Here we show four typical scenes.
 
 
 
 
-### 2.  Building Extraction Evaluation of SR Results
-
-![](results_img/Building.png)
-
-**Fig. 10.** Visualization comparison of buildings extracted from SR results of different methods. (a) and (b) are from the AIRS dataset. (c) and (d) are from the WHU Building dataset.
-
-
-
-
-### 3. Evaluation on Real-world Chinese Gaofen Multispectral Data
+### 2. Evaluation on Real-world Chinese Gaofen Multispectral Data
 
 ![](results_img/GF-1-2.png)
 
-**Fig. 11.** Comparison of six methods for 4x super-resolution on real-world RS images. (a) GF-1 satellite image. (b) GF-2 satellite image. Smaller NIQE and higher AG imply better super-resolution results.
+**Fig. 9.** Comparison of six methods for 4x super-resolution on real-world RS images. (a) GF-1 satellite image. (b) GF-2 satellite image. Smaller NIQE and higher AG imply better super-resolution results.
