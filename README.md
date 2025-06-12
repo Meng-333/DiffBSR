@@ -1,7 +1,7 @@
 Our code will coming soon
 
 # DiffBSR
-Remote sensing image blind super-resolution via a convolutional neural network-guided condition Diffusion model
+Remote sensing image blind super-resolution via a convolutional neural network-guided condition Diffusion model.
 Here is the first commit, more code of the DiffBSR will be released soon.
 
 ## Folder Structure
