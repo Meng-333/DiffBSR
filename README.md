@@ -134,21 +134,21 @@ python infer.py
 
 ![](results_img/AIRS.png)
 
-**Fig. 6.** Visual comparisons of experiments on AIRS dataset.
+**Fig. 5.** Visual comparisons of experiments on AIRS dataset.
 
 
 
 
 ![](results_img/WHU.png)
 
-**Fig. 7.** Visual comparisons of experiments on WHU Building dataset.
+**Fig. 6.** Visual comparisons of experiments on WHU Building dataset.
 
 
 
 
 ![](results_img/UCM.png)
 
-**Fig. 8.** Visual comparisons of experiments on UC Merced dataset. Here we show four typical scenes.
+**Fig. 7.** Visual comparisons of experiments on UC Merced dataset. Here we show four typical scenes.
 
 
 
