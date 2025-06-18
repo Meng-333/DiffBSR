@@ -57,7 +57,7 @@ Our folder structure is as follows:
 
 - DiffBSR (Diffusion model architecture): This project is based on [[BlindSRSNF]](https://github.com/hanlinwu/BlindSRSNF)
 
-  - Contains six blind super-resolution models: ['DANv2', 'DCLS', 'DRSR', 'BlindSRSNF', 'SR3', '**DiffBSR**']
+  - Contains six blind super-resolution models: ['DANv2', 'DCLS', 'DRSR', 'BlindSRSNF', 'NeurOpDiff', '**DiffBSR**']
 
 
 ## Environment Installation
