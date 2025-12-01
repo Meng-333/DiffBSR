@@ -17,7 +17,7 @@ Our folder structure is as follows:
 │   │   ├── degradation_encoder_arch.py
 │   │   ├── sr3_vanilla_unet_arch.py
 │   ├── configs
-│   │   ├── DiffBSR_iso.yaml
+│   │   ├── diffbsr_iso.yaml
 │   │   ├── diffbsr_aniso.yaml
 │   │   ├── diffbsr_aniso_UCM.yaml
 │   ├── data
@@ -57,7 +57,7 @@ Our folder structure is as follows:
 
 - DiffBSR (Diffusion model architecture): This project is based on [[BlindSRSNF]](https://github.com/hanlinwu/BlindSRSNF)
 
-  - Contains six blind super-resolution models: ['DANv2', 'DCLS', 'DRSR', 'BlindSRSNF', 'NeurOpDiff', '**DiffBSR**']
+  - Contains six blind super-resolution models: ['DANv2', 'DCLS', 'DRSR', 'BlindSRSNF', 'BlindDiff', '**DiffBSR**']
 
 
 ## Environment Installation
