@@ -4,7 +4,7 @@
   - Fanen Meng, Sensen Wu, Laifu Zhang, Haoyu Jing, Yijun Chen, Yiming Yan, Tian Feng, Renyi Liu, Zhenhong Du
   - *IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing*, vol. 62, pp. 1-22
   - https://ieeexplore.ieee.org/document/10375518
-  - checkpoint: https://pan.baidu.com/s/1s2Is4QxwYDPSIPHxELETUg?pwd=1234 or https://drive.google.com/drive/folders/1_ncUya30a-AwaDXkys56AMj2m8eSJjfH?usp=sharing
+  - checkpoint: https://pan.baidu.com/s/1s2Is4QxwYDPSIPHxELETUg?pwd=1234 or https://drive.google.com/file/d/1TeWlhkRCxA0sIdquEvbirDO7tWiZwO_2/view?usp=sharing
 
 ![](results_img/DiffBSR.png)
 Fig. 1. Flowchart of the proposed method. Our condition Diffusion model contains a forward diffusion process which gradually adds noise to the HR image. And a convolutional neural network-guided end-to-end reverse generation process is applied to generate an accurate SR image corresponding to the LR image. 
