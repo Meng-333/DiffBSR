@@ -1,0 +1,38 @@
+name: DCLSx4_setting2
+suffix: ~  # add suffix to saved images
+model: blind
+distortion: sr
+scale: 4
+crop_border: ~  # crop border when evaluation. If None(~), crop the scale pixels
+gpu_ids: [0]
+pca_matrix_path: ../../../pca_matrix/DCLS/pca_aniso_matrix_x4.pth
+
+datasets:
+
+  test1:
+    name: test_DCLS
+    mode: LQGT
+    dataroot_GT: /root/autodl-tmp/DCLS/codes/data/AIRS_LR/AIRS_test.lmdb
+    dataroot_LQ: /root/autodl-tmp/DCLS/codes/data/AIRS_LR/aniso_1.0_4.0_0_noise_0.lmdb
+    #dataroot_LQ: /root/autodl-tmp/DCLS/codes/data/AIRS_LR/aniso_1.5_3.0_45_noise_15.lmdb
+    #dataroot_LQ: /root/autodl-tmp/DCLS/codes/data/AIRS_LR/aniso_2.5_2.0_45_noise_25.lmdb
+
+
+    #dataroot_GT: /root/autodl-tmp/DCLS/codes/data/WHU_LR/WHU_test.lmdb
+    #dataroot_LQ: /root/autodl-tmp/DCLS/codes/data/WHU_LR/aniso_1.0_4.0_0_noise_0.lmdb
+    #dataroot_LQ: /root/autodl-tmp/DCLS/codes/data/WHU_LR/aniso_1.5_3.0_45_noise_15.lmdb
+    #dataroot_LQ: /root/autodl-tmp/DCLS/codes/data/WHU_LR/aniso_2.5_2.0_45_noise_25.lmdb
+
+#### network structures
+network_G:
+  which_model_G: DCLS
+  setting:
+    nf: 64
+    nb: 10
+    ng: 5
+    input_para: 256
+    kernel_size: 21
+
+#### path
+path:
+  pretrain_model_G: /root/autodl-tmp/DCLS/experiments/DCLS/DCLSx4_setting2/models/latest_G.pth
