@@ -1,8 +1,14 @@
-Our code will coming soon
+# **DiffBSR**
+**Remote Sensing Image Blind Super-Resolution via a Convolutional Neural Network-Guided Conditional Diffusion Model**
 
-# DiffBSR
-Remote sensing image blind super-resolution via a convolutional neural network-guided condition Diffusion model.
-Here is the first commit, more code of the DiffBSR will be released soon.
+  - Fanen Meng, Sensen Wu, Laifu Zhang, Haoyu Jing, Yijun Chen, Yiming Yan, Tian Feng, Renyi Liu, Zhenhong Du
+  - *IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing*, vol. 62, pp. 1-22
+  - https://ieeexplore.ieee.org/document/10375518
+  - checkpoint:  https://pan.baidu.com/s/1eUANo6besXp5HctEqqRVOA?pwd=0115 or https://drive.google.com/drive/folders/1_ncUya30a-AwaDXkys56AMj2m8eSJjfH?usp=sharing
+
+![](results_img/DiffBSR.png)
+Fig. 1. Flowchart of the proposed method. Our condition Diffusion model contains a forward diffusion process which gradually adds noise to the HR image. And a convolutional neural network-guided end-to-end reverse generation process is applied to generate an accurate SR image corresponding to the LR image. 
+
 
 ## Folder Structure
 
@@ -134,14 +140,16 @@ python infer.py
 
 ![](results_img/AIRS.png)
 
-**Fig. 5.** Visual comparisons of experiments on AIRS dataset.
+**Fig. 5.** Visual comparisons of experiments on the AIRS dataset. Here we show three groups of degradations. 
+
 
 
 
 
 ![](results_img/WHU.png)
 
-**Fig. 6.** Visual comparisons of experiments on WHU Building dataset.
+**Fig. 6.** Visual comparisons of experiments on the WHU Building dataset. Here we show three groups of degradations.
+
 
 
 
@@ -151,8 +159,9 @@ python infer.py
 **Fig. 7.** Visual comparisons of experiments on UC Merced dataset. Here we show four typical scenes.
 
 
+![](results_img/Buildings_extract.png)
 
-
+**Fig. 8.** Visualization comparison of buildings extracted from SR results of different methods. (a) is from the AIRS dataset. (b) is from the WHU Building dataset. 
 
 ### 2. Evaluation on Real-world Chinese Gaofen Multispectral Data
 
