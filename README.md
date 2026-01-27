@@ -2,8 +2,8 @@
 **Remote Sensing Image Blind Super-Resolution via a Convolutional Neural Network-Guided Conditional Diffusion Model**
 
   - Fanen Meng, Sensen Wu, Laifu Zhang, Haoyu Jing, Yijun Chen, Yiming Yan, Tian Feng, Renyi Liu, Zhenhong Du
-  - *IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing*, vol. 62, pp. 1-22
-  - https://ieeexplore.ieee.org/document/10375518
+  - *IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing*, vol. 19, pp. 2641–2657
+  - https://ieeexplore.ieee.org/document/11303729
   - checkpoint: https://pan.baidu.com/s/1s2Is4QxwYDPSIPHxELETUg?pwd=1234 or https://drive.google.com/file/d/1TeWlhkRCxA0sIdquEvbirDO7tWiZwO_2/view?usp=sharing
 
 ![](results_img/DiffBSR.png)
