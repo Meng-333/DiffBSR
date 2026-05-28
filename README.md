@@ -5,6 +5,7 @@
   - *IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing*, vol. 19, pp. 2641–2657
   - https://ieeexplore.ieee.org/document/11303729
   - checkpoint: https://pan.baidu.com/s/1s2Is4QxwYDPSIPHxELETUg?pwd=1234 or https://drive.google.com/file/d/1TeWlhkRCxA0sIdquEvbirDO7tWiZwO_2/view?usp=sharing
+  - In the code, the function names 'FastDiffSR_UNet' and 'FastDiffBlindSRModel' correspond to 'DiffSR_UNet' and 'DiffBlindSRModel', respectively.
 
 ![](results_img/DiffBSR.png)
 Fig. 1. Flowchart of the proposed method. Our condition Diffusion model contains a forward diffusion process which gradually adds noise to the HR image. And a convolutional neural network-guided end-to-end reverse generation process is applied to generate an accurate SR image corresponding to the LR image. 
