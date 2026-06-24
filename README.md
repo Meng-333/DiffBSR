@@ -175,7 +175,9 @@ python infer.py
 If our code helps your research or work, please consider citing our paper. 
 
 ```
-F. Meng et al., "Remote Sensing Image Blind Super-Resolution via a Convolutional Neural Network-Guided Conditional Diffusion Model," in IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, vol. 19, pp. 2641-2657, 2026, doi: 10.1109/TGRS.2024.3458009.
+F. Meng et al., "Remote Sensing Image Blind Super-Resolution via a Convolutional Neural Network-Guided Conditional Diffusion Model,"
+in IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, vol. 19, pp. 2641-2657, 2026,
+doi: 10.1109/JSTARS.2025.3645789.
 ```
 
 ## Contact
