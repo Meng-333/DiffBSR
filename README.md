@@ -172,7 +172,7 @@ python infer.py
 
 ## Citation
 
-If our code helps your research or work, please consider citing our paper. 
+If our code helps with your research or work, please consider citing our paper. 
 
 ```
 F. Meng et al., "Remote Sensing Image Blind Super-Resolution via a Convolutional Neural Network-Guided Conditional Diffusion Model,"
