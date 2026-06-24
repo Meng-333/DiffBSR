@@ -169,3 +169,16 @@ python infer.py
 ![](results_img/GF-1-2.png)
 
 **Fig. 9.** Comparison of six methods for 4x super-resolution on real-world RS images. (a) GF-1 satellite image. (b) GF-2 satellite image. Smaller NIQE and higher AG imply better super-resolution results.
+
+## Citation
+
+If our code helps your research or work, please consider citing our paper. 
+
+```
+F. Meng et al., "Remote Sensing Image Blind Super-Resolution via a Convolutional Neural Network-Guided Conditional Diffusion Model," in IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, vol. 19, pp. 2641-2657, 2026, doi: 10.1109/TGRS.2024.3458009.
+```
+
+## Contact
+
+If you have any questions about it, please feel free to let me know. (email:[mengfanen@tmslab.cn; 12238036@zju.edu.cn]
+
